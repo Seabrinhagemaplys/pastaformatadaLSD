@@ -37,7 +37,7 @@ architecture arqsim of tb_bloco_or is
         entrada_um <= '1';
         entrada_dois <= '1'; wait for tempo*5;
         
-        --Testes com clear assincrono ligado
+        --Testes com clear ligado
         clear_assincrono <='1';
         entrada_um <= '0';
         entrada_dois <= '0'; wait for tempo*5;
