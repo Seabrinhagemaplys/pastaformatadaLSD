@@ -1,4 +1,5 @@
 -- Arthur Coronho, Lucas Szuster, Murillo Kelvin - Turma PN5
+-- Code your testbench here
 library IEEE;
 use IEEE.std_logic_1164.all;
 
@@ -11,6 +12,8 @@ architecture arq of tb_alternador is
     signal clk        : std_logic := '1';
     signal clk_enable : std_logic := '1';
     constant tempo    : time := 10 ns;
+    signal clear_assincrono : std_logic := '0';
+
 begin
 	-- inicializando a uut e realizando o port map
 	uut:entity work.alternador
@@ -18,7 +21,8 @@ begin
     port map(
 		entrada => entrada,
         saida => saida,
-		clk => clk
+		clk => clk,
+        clear_assincrono => clear_assincrono
 	);
     
     -- inicializando o pulso do clock
@@ -27,7 +31,16 @@ begin
     stim: process
     begin
     	-- estímulos de entrada
-    	entrada <= '1'; wait for tempo*5;
+    	 clear_assincrono <= '0';
+        entrada <= '1'; wait for tempo*5;
+        entrada <= '0'; wait for tempo*5;
+        entrada <= '1'; wait for tempo*10;
+        entrada <= '0'; wait for tempo*5;
+        entrada <= '1'; wait for tempo*20;
+        entrada <= '0'; wait for tempo*5;
+        
+        clear_assincrono <= '1';
+        entrada <= '1'; wait for tempo*5;
         entrada <= '0'; wait for tempo*5;
         entrada <= '1'; wait for tempo*10;
         entrada <= '0'; wait for tempo*5;
@@ -41,3 +54,6 @@ begin
         wait;  
     end process;
 end architecture;
+            
+            
+    
