@@ -4,4 +4,4 @@ Esse bloco armazena as informações de entrada para N bits e, na próxima borda
 
 ### Link do projeto no EDA playground
 
-[link do projeto](https://edaplayground.com/x/c5fL)
+[link do projeto](https://edaplayground.com/x/E2h9)
