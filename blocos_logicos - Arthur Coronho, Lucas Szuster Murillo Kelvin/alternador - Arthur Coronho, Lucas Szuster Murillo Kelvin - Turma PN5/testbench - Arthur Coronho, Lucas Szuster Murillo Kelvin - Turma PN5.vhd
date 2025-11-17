@@ -37,8 +37,18 @@ begin
         entrada <= '0'; wait for tempo*5;
         entrada <= '1'; wait for tempo*20;
         entrada <= '0'; wait for tempo*5;
-        
+                
+        -- testando clear
         clear_assincrono <= '1';
+        entrada <= '1'; wait for tempo*5;
+        entrada <= '0'; wait for tempo*5;
+        entrada <= '1'; wait for tempo*10;
+        entrada <= '0'; wait for tempo*5;
+        entrada <= '1'; wait for tempo*20;
+        entrada <= '0'; wait for tempo*5;
+        
+        -- testando desligar o clear
+        clear_assincrono <= '0';
         entrada <= '1'; wait for tempo*5;
         entrada <= '0'; wait for tempo*5;
         entrada <= '1'; wait for tempo*10;
