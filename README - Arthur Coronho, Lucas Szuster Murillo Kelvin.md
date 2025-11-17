@@ -1,4 +1,7 @@
+**NÃO É O REPOSITÓRIO FINAL DO PROJETO**
+
 Integrantes do grupo: Arthur Coronho Seabra Eiras, Lucas Araújo Campos Szuster e Murillo Kelvin de Andrade Santos
+
 Link do Github: [Link do github](https://github.com/Seabrinhagemaplys/TP-LSD---Arthur-Coronho-Lucas-Szuster-Murillo-Kelvin---Turma-PN5/tree/main)
 
 ## Projeto final da discplina de Laboratório de Sistemas Digitais
