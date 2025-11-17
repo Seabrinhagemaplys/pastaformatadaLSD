@@ -6,4 +6,4 @@ Esta é a função deste bloco.
 
 ### Link do projeto no EDA playground
 
-[link do projeto](https://edaplayground.com/x/Hpj_)
+[link do projeto](https://edaplayground.com/x/pwJ3)
