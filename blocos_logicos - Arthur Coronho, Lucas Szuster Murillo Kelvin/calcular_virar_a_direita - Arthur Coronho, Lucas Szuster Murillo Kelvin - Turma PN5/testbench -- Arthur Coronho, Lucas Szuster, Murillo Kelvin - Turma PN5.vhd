@@ -141,7 +141,7 @@ begin
         outra_emergencia <= '1'; 
         wait for tempo;
         
-        -- Testes agora com clear_assincrono = 1:
+        -- Testes agora com clear = 1:
         
         clear_assincrono <='1';
         -- teste 1: 0 0 0 0
