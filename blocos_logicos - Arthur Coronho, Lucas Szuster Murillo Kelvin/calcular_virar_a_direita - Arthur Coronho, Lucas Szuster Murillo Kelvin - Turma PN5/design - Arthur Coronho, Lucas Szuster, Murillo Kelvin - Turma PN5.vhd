@@ -20,5 +20,5 @@ architecture calc of calcular_virar_a_direita is
 begin
 	-- pode virar a direita se nenhum pedestre está atravessando
 	virar_a_direita <= '0' when clear_assincrono = '1' else
-    not(pedestre) and not(outro_pedestre) and not(emergencia) and not(outra_emergencia);	
+    (not(pedestre) and not(outro_pedestre) and not(emergencia) and not(outra_emergencia));	
 end architecture;
