@@ -32,13 +32,23 @@ begin
     
     stim: process
     begin
+    	-- estímulos iniciais
         I <= "0"; wait for tempo * 5;
         I <= "1"; wait for tempo * 5;
         I <= "0"; wait for tempo * 5;
         I <= "1"; wait for tempo * 5;
-        reset <= '1'; I <= "1"; wait for tempo * 5;
-        reset <= '0';
         
+        -- ligando o reset
+        reset <= '1'; 
+        I <= "1"; 
+        wait for tempo * 5;
+        
+        -- desligando o reset;
+        reset <= '0';
+        I <= "0"; wait for tempo * 5;
+        I <= "1"; wait for tempo * 5;
+        
+        -- Terminando clock
         clk_enable <= '0';
     	wait;
     end process;
