@@ -5,8 +5,9 @@ use IEEE.std_logic_1164.all;
 entity alternador is
     port(
         -- entradas
-        entrada : in  std_logic := '0';
-        clk     : in  std_logic;
+        entrada         : in  std_logic := '0';
+        clear_assincrono: in std_logic;
+        clk             : in  std_logic;
 
         -- saídas
         saida   : out std_logic := '0'
@@ -30,5 +31,6 @@ begin
     end process;
 
     -- a saída é o valor de inversor quando entrada = '1'
-    saida <= inversor when entrada = '1' else '0';
+    	saida <= '0' when clear_assincrono = '1' else
+    	inversor when entrada = '1' else '0';
 end architecture;
